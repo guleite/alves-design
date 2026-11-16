@@ -7,10 +7,11 @@
   <meta name="description" content="Escritório AlvesDesign, da arquiteta July Alves. Projetos residenciais, comerciais e de interiores em Brasília: arquitetura afetiva, humana e personalizada.">
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#1d1e20">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1e20'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='38' fill='%23f1e9de'%3Ea%3C/text%3E%3Ccircle cx='47' cy='42' r='4' fill='%23c0703f'/%3E%3C/svg%3E">
+  <link rel="icon" type="image/png" href="assets/img/marca/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/marca/favicon-192.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="assets/img/hero-jardim-cactos.webp">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -19,7 +20,7 @@
   <!-- Abertura -->
   <div class="loader" aria-hidden="true">
     <div class="loader__inner">
-      <div class="loader__word"><span>a</span><span>l</span><span>v</span><span>e</span><span>s</span><span class="dot">.</span></div>
+      <div class="loader__word"><span class="loader__logo"></span></div>
       <div class="loader__line"><i></i></div>
       <p class="loader__tag">arquitetura com alma brasileira</p>
     </div>
@@ -32,7 +33,7 @@
   <!-- Topo -->
   <header class="nav" id="topo">
     <a href="#inicio" class="logo" aria-label="AlvesDesign, início">
-      <span class="logo__word">alves<i>.</i></span><span class="logo__sub">design</span>
+      <span class="logo__mark" aria-hidden="true"></span>
     </a>
     <nav class="nav__links" aria-label="Principal">
       <a href="#sobre">Sobre</a>
@@ -49,13 +50,13 @@
     <div class="menu__bg"></div>
     <div class="menu__wrap">
       <ol class="menu__list">
-        <li><a href="#sobre" data-img="assets/img/july-ceu.webp"><small>01</small><span>Sobre a July</span></a></li>
+        <li><a href="#sobre" data-img="assets/img/july-rosto-pb.webp"><small>01</small><span>Sobre a July</span></a></li>
         <li><a href="#servicos" data-img="assets/img/hero-casadeadel.webp"><small>02</small><span>Serviços</span></a></li>
         <li><a href="#projetos" data-img="assets/img/p-suite-cobertura.webp"><small>03</small><span>Projetos</span></a></li>
         <li><a href="#processo" data-img="assets/img/equipe-prancheta.webp"><small>04</small><span>Processo</span></a></li>
         <li><a href="#contato" data-img="assets/img/hero-jardim-cactos.webp"><small>05</small><span>Contato</span></a></li>
       </ol>
-      <figure class="menu__preview"><img src="assets/img/july-ceu.webp" alt=""></figure>
+      <figure class="menu__preview"><img src="assets/img/july-rosto-pb.webp" alt=""></figure>
       <div class="menu__foot">
         <a href="https://www.instagram.com/julyannealves_/" target="_blank" rel="noopener">Instagram ↗</a>
         <button class="link-btn" data-open-lead>WhatsApp ↗</button>
@@ -142,28 +143,31 @@
     </section>
 
     <!-- SOBRE -->
-    <section class="about" id="sobre">
+    <section class="about wm" id="sobre">
       <div class="wrap about__grid">
         <div class="about__media">
-          <figure class="about__main reveal-img"><img src="assets/img/july-ceu.webp" alt="Arquiteta July Alves em pé sobre uma laje em balanço, com céu azul ao fundo" loading="lazy"></figure>
-          <figure class="about__small reveal-img" data-parallax="10"><img src="assets/img/july-cactos.webp" alt="July Alves em ambiente com cactos e tons terrosos" loading="lazy"></figure>
+          <figure class="about__main reveal-img"><img src="assets/img/july-rosto-pb.webp" alt="Retrato em preto e branco da arquiteta July Alves em uma obra" loading="lazy"></figure>
+          <figure class="about__small reveal-img" data-parallax="10"><img src="assets/img/july-perfil-cactos.webp" alt="July Alves sentada ao lado de um cacto, em ambiente de tons terrosos" loading="lazy"></figure>
           <div class="about__badge" aria-hidden="true">
             <svg viewBox="0 0 120 120"><defs><path id="circ" d="M60 60m-46 0a46 46 0 1 1 92 0a46 46 0 1 1-92 0"/></defs><text><textPath href="#circ">arquitetura afetiva · humana · personalizada · </textPath></text></svg>
-            <span>a.</span>
+            <span><i class="about__badge-mark"></i></span>
           </div>
         </div>
         <div class="about__text">
           <p class="eyebrow"><span>Sobre a July</span></p>
           <h2 class="h2 split">Arquitetura afetiva, humana &amp; personalizada</h2>
-          <p class="lead fade-up">O AlvesDesign é o escritório da arquiteta <strong>July Alves</strong>, em Brasília. Aqui, cada projeto é desenvolvido de acordo com as necessidades, os desejos e a identidade de quem vai habitá-lo, com brasilidade, design e afeto em cada detalhe.</p>
+          <p class="about__lead fade-up">O AlvesDesign é o escritório da arquiteta <strong>July Alves</strong>, em Brasília. Aqui, cada projeto é desenvolvido de acordo com as necessidades, os desejos e a identidade de quem vai habitá-lo, com brasilidade, design e afeto em cada detalhe.</p>
+          <p class="fade-up">Diretora criativa e fundadora do escritório, July é formada em Arquitetura e Urbanismo pela Universidade Católica de Brasília e Master em Arquitetura &amp; Lighting Design pelo IPOG, com especializações em paisagismo, luminotécnica e gestão de obras. Tem passagens pelo TSE, pela Tecnisa, pela MRV e por administrações regionais e, como docente do SENAI, ajudou a revitalizar mais de 50 espaços públicos e monumentos históricos do DF. Com poucos meses de escritório, venceu o Archathon entre mais de 300 inscritos e estreou na CasaCOR Brasília 2017, voltando à mostra em 2018 e 2023. Hoje atende clientes em Brasília, Goiás, Alagoas e até na China.</p>
           <p class="fade-up">Somos versáteis: projetos clean ou cheios de cor, casas, apartamentos compactos, salões, clínicas e showrooms. Do estudo à obra, a gente vive cada etapa junto com você.</p>
           <ul class="creds">
-            <li class="fade-up"><b>Master</b><span>em Arquitetura</span></li>
+            <li class="fade-up"><b>Master</b><span>em Arquitetura &amp; Lighting Design · IPOG</span></li>
             <li class="fade-up"><b>CasaCOR</b><span>Elenco CasaCOR Brasília</span></li>
             <li class="fade-up"><b>1 de 6</b><span>profissionais do Centro-Oeste convidados pela Unitintas</span></li>
             <li class="fade-up"><b>BNI</b><span>Especialista em Arquitetura Residencial · Esplanada</span></li>
+            <li class="fade-up"><b>+128</b><span>projetos executados</span></li>
+            <li class="fade-up"><b>Curadoria</b><span>de acabamentos finos e de artesanato brasileiro</span></li>
           </ul>
-          <button class="btn btn--line fade-up" data-open-lead data-cursor="Vamos?"><span>Quero conversar com a July</span><svg viewBox="0 0 40 12" aria-hidden="true"><path d="M0 6h38M33 1l5 5-5 5"/></svg></button>
+          <button class="btn btn--line fade-up" data-open-lead data-cursor="Vamos?"><span>Quero conversar com a equipe</span><svg viewBox="0 0 40 12" aria-hidden="true"><path d="M0 6h38M33 1l5 5-5 5"/></svg></button>
         </div>
       </div>
     </section>
@@ -282,7 +286,7 @@
     </section>
 
     <!-- PROJETOS -->
-    <section class="work" id="projetos">
+    <section class="work wm" id="projetos">
       <div class="wrap">
         <div class="work__head">
           <div>
@@ -299,28 +303,28 @@
         </div>
 
         <div class="gallery">
-          <figure class="g-item g--tall" data-cat="mostras"><img src="assets/img/p-casacor-galeria.webp" alt="Espaço autoral com concreto, obras de arte e banco de aço" loading="lazy"><figcaption><small>Mostras</small>Espaço autoral · CasaCOR Brasília</figcaption></figure>
-          <figure class="g-item" data-cat="residencial"><img src="assets/img/p-suite-cobertura.webp" alt="Suíte com banheira, pedra natural e madeira" loading="lazy"><figcaption><small>Residencial</small>Suíte cobertura</figcaption></figure>
-          <figure class="g-item" data-cat="residencial"><img src="assets/img/hero-suite-master.webp" alt="Suíte master com madeira, cortinas leves e luz natural" loading="lazy"><figcaption><small>Residencial</small>Suíte master</figcaption></figure>
-          <figure class="g-item g--tall" data-cat="interiores"><img src="assets/img/p-estante.webp" alt="Living com estante de madeira e tapete orgânico" loading="lazy"><figcaption><small>Interiores</small>Living com estante autoral</figcaption></figure>
-          <figure class="g-item" data-cat="interiores"><img src="assets/img/p-living-corredor.webp" alt="Living Casa Déa&amp;Del com pendentes e quadros" loading="lazy"><figcaption><small>Interiores</small>Living Casa Déa&amp;Del</figcaption></figure>
-          <figure class="g-item g--wide" data-cat="comercial"><img src="assets/img/srv-comercial.webp" alt="Salão de beleza com estações de madeira" loading="lazy"><figcaption><small>Comercial</small>Salão de beleza</figcaption></figure>
-          <figure class="g-item" data-cat="interiores"><img src="assets/img/p-escritorio-residencial.webp" alt="Escritório residencial com parede verde e marcenaria" loading="lazy"><figcaption><small>Interiores</small>Escritório residencial</figcaption></figure>
-          <figure class="g-item g--tall" data-cat="comercial"><img src="assets/img/p-showroom-detalhe.webp" alt="Showroom com painéis de revestimentos" loading="lazy"><figcaption><small>Comercial</small>Showroom de revestimentos</figcaption></figure>
-          <figure class="g-item" data-cat="residencial"><img src="assets/img/p-loft-parksul.webp" alt="Loft compacto com cozinha integrada" loading="lazy"><figcaption><small>Residencial</small>Loft no ParkSul · 39 m²</figcaption></figure>
-          <figure class="g-item" data-cat="comercial"><img src="assets/img/p-lifeness.webp" alt="Sala de soroterapia com poltronas reclináveis e madeira" loading="lazy"><figcaption><small>Comercial</small>Sala de soroterapia · Lifeness</figcaption></figure>
-          <figure class="g-item g--tall" data-cat="mostras"><img src="assets/img/p-paisagismo-casacor.webp" alt="Paisagismo tropical com palmeiras e céu azul" loading="lazy"><figcaption><small>Mostras</small>Paisagismo &amp; iluminação · CasaCOR</figcaption></figure>
-          <figure class="g-item" data-cat="comercial"><img src="assets/img/p-fachada-vitri.webp" alt="Fachada comercial com vasos de cerâmica" loading="lazy"><figcaption><small>Comercial</small>Fachada comercial · Detalhe</figcaption></figure>
-          <figure class="g-item" data-cat="residencial"><img src="assets/img/p-lavabo-terracota.webp" alt="Sala de banho em tons de terracota com metais dourados" loading="lazy"><figcaption><small>Residencial</small>Sala de banho</figcaption></figure>
-          <figure class="g-item g--wide" data-cat="residencial"><img src="assets/img/p-residencia-campo.webp" alt="Residência térrea com jardim e piscina" loading="lazy"><figcaption><small>Residencial</small>Residência de campo</figcaption></figure>
-          <figure class="g-item" data-cat="comercial"><img src="assets/img/p-comercial-lounge.webp" alt="Lounge comercial com divisórias metálicas" loading="lazy"><figcaption><small>Comercial</small>Lounge de atendimento</figcaption></figure>
-          <figure class="g-item" data-cat="residencial"><img src="assets/img/p-edificio.webp" alt="Edifício residencial iluminado ao entardecer" loading="lazy"><figcaption><small>Residencial</small>Residencial multifamiliar</figcaption></figure>
+          <figure class="g-item g--tall" data-cat="mostras"><img src="assets/img/projetos/p-casacor-galeria.webp" alt="Espaço autoral com concreto, obras de arte e banco de aço" loading="lazy"><figcaption><small>Mostras</small>Espaço autoral · CasaCOR Brasília</figcaption></figure>
+          <figure class="g-item" data-cat="residencial"><img src="assets/img/projetos/p-suite-cobertura.webp" alt="Suíte com banheira, pedra natural e madeira" loading="lazy"><figcaption><small>Residencial</small>Suíte cobertura</figcaption></figure>
+          <figure class="g-item" data-cat="residencial"><img src="assets/img/projetos/hero-suite-master.webp" alt="Suíte master com madeira, cortinas leves e luz natural" loading="lazy"><figcaption><small>Residencial</small>Suíte master</figcaption></figure>
+          <figure class="g-item g--tall" data-cat="interiores"><img src="assets/img/projetos/p-estante.webp" alt="Living com estante de madeira e tapete orgânico" loading="lazy"><figcaption><small>Interiores</small>Living com estante autoral</figcaption></figure>
+          <figure class="g-item" data-cat="interiores"><img src="assets/img/projetos/p-living-corredor.webp" alt="Living Casa Déa&amp;Del com pendentes e quadros" loading="lazy"><figcaption><small>Interiores</small>Living Casa Déa&amp;Del</figcaption></figure>
+          <figure class="g-item g--wide" data-cat="comercial"><img src="assets/img/projetos/srv-comercial.webp" alt="Salão de beleza com estações de madeira" loading="lazy"><figcaption><small>Comercial</small>Salão de beleza</figcaption></figure>
+          <figure class="g-item" data-cat="interiores"><img src="assets/img/projetos/p-escritorio-residencial.webp" alt="Escritório residencial com parede verde e marcenaria" loading="lazy"><figcaption><small>Interiores</small>Escritório residencial</figcaption></figure>
+          <figure class="g-item g--tall" data-cat="comercial"><img src="assets/img/projetos/p-showroom-detalhe.webp" alt="Showroom com painéis de revestimentos" loading="lazy"><figcaption><small>Comercial</small>Showroom de revestimentos</figcaption></figure>
+          <figure class="g-item" data-cat="residencial"><img src="assets/img/projetos/p-loft-parksul.webp" alt="Loft compacto com cozinha integrada" loading="lazy"><figcaption><small>Residencial</small>Loft no ParkSul · 39 m²</figcaption></figure>
+          <figure class="g-item" data-cat="comercial"><img src="assets/img/projetos/p-lifeness.webp" alt="Sala de soroterapia com poltronas reclináveis e madeira" loading="lazy"><figcaption><small>Comercial</small>Sala de soroterapia · Lifeness</figcaption></figure>
+          <figure class="g-item g--tall" data-cat="mostras"><img src="assets/img/projetos/p-paisagismo-casacor.webp" alt="Paisagismo tropical com palmeiras e céu azul" loading="lazy"><figcaption><small>Mostras</small>Paisagismo &amp; iluminação · CasaCOR</figcaption></figure>
+          <figure class="g-item" data-cat="comercial"><img src="assets/img/projetos/p-fachada-vitri.webp" alt="Fachada comercial com vasos de cerâmica" loading="lazy"><figcaption><small>Comercial</small>Fachada comercial · Detalhe</figcaption></figure>
+          <figure class="g-item" data-cat="residencial"><img src="assets/img/projetos/p-lavabo-terracota.webp" alt="Sala de banho em tons de terracota com metais dourados" loading="lazy"><figcaption><small>Residencial</small>Sala de banho</figcaption></figure>
+          <figure class="g-item g--wide" data-cat="residencial"><img src="assets/img/projetos/p-residencia-campo.webp" alt="Residência térrea com jardim e piscina" loading="lazy"><figcaption><small>Residencial</small>Residência de campo</figcaption></figure>
+          <figure class="g-item" data-cat="comercial"><img src="assets/img/projetos/p-comercial-lounge.webp" alt="Lounge comercial com divisórias metálicas" loading="lazy"><figcaption><small>Comercial</small>Lounge de atendimento</figcaption></figure>
+          <figure class="g-item" data-cat="residencial"><img src="assets/img/projetos/p-edificio.webp" alt="Edifício residencial iluminado ao entardecer" loading="lazy"><figcaption><small>Residencial</small>Residencial multifamiliar</figcaption></figure>
         </div>
       </div>
     </section>
 
     <!-- PROCESSO -->
-    <section class="process" id="processo">
+    <section class="process wm" id="processo">
       <div class="wrap process__grid">
         <div class="process__sticky">
           <p class="eyebrow"><span>Processo</span></p>
@@ -351,6 +355,7 @@
         <ul class="presence__list">
           <li>CasaCOR <em>Brasília</em></li>
           <li>Unitintas</li>
+          <li>Sebrae</li>
           <li>Suvinil</li>
           <li>Detalhe <em>Experience</em></li>
           <li>BNI <em>Esplanada</em></li>
@@ -377,7 +382,7 @@
     </section>
 
     <!-- DÚVIDAS -->
-    <section class="faq">
+    <section class="faq wm">
       <div class="wrap faq__grid">
         <div>
           <p class="eyebrow"><span>Dúvidas</span></p>
@@ -398,7 +403,7 @@
       <div class="final__inner wrap">
         <p class="eyebrow eyebrow--light"><span>Vamos começar</span></p>
         <h2 class="final__title split">Vamos projetar o lugar onde a sua história acontece?</h2>
-        <p class="final__lead fade-up">Responda 4 perguntas rápidas e fale direto com a July no WhatsApp.</p>
+        <p class="final__lead fade-up">Responda 4 perguntas rápidas e fale direto com a nossa equipe no WhatsApp.</p>
         <button class="btn btn--light fade-up" data-open-lead data-cursor="Vamos?">
           <svg class="wa" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>
           <span>Chamar no WhatsApp</span>
@@ -410,7 +415,7 @@
   <footer class="footer">
     <div class="wrap footer__grid">
       <div>
-        <a href="#inicio" class="logo logo--lg"><span class="logo__word">alves<i>.</i></span><span class="logo__sub">design</span></a>
+        <a href="#inicio" class="logo logo--lg" aria-label="AlvesDesign, voltar ao início"><span class="logo__mark" aria-hidden="true"></span></a>
         <p>Arquitetura afetiva, humana &amp; personalizada.</p>
       </div>
       <div>
@@ -438,7 +443,7 @@
   <!-- Botão flutuante -->
   <button class="wa-float" data-open-lead aria-label="Chamar no WhatsApp">
     <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>
-    <span>Fale com a July</span>
+    <span>Converse com a nossa equipe</span>
   </button>
 
   <!-- Lightbox -->
@@ -456,7 +461,7 @@
       <aside class="lead__aside">
         <img src="assets/img/srv-paisagismo.webp" alt="">
         <div>
-          <span class="logo__word">alves<i>.</i></span>
+          <span class="logo__mark" aria-hidden="true"></span>
           <p>“Cada projeto nasce da escuta.”</p>
         </div>
       </aside>
@@ -506,7 +511,7 @@
             </div>
           </fieldset>
           <fieldset class="q q--form" data-name="contato">
-            <legend>Para quem a July vai responder?</legend>
+            <legend>Para quem a nossa equipe vai responder?</legend>
             <label class="field"><span>Seu nome</span><input type="text" name="nome" autocomplete="name" required></label>
             <label class="field"><span>WhatsApp</span><input type="tel" name="whatsapp" inputmode="tel" autocomplete="tel" placeholder="(61) 90000-0000" required></label>
             <label class="field"><span>Cidade / bairro <em>(opcional)</em></span><input type="text" name="local" autocomplete="address-level2"></label>
