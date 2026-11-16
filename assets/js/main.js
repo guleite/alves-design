@@ -95,7 +95,7 @@ function heroIntro(tl) {
     .from(".panel__info small, .panel__info h2", { y: 30, opacity: 0, duration: 1, stagger: 0.06, ease: "expo.out" }, 0.9)
     .from(".hero__title .line > span", { yPercent: 110, duration: 1.3, stagger: 0.1, ease: "expo.out" }, 0.45)
     .from(".hero__eyebrow, .hero__lead, .hero__cta, .hero__scroll", { y: 24, opacity: 0, duration: 1, stagger: 0.08, ease: "expo.out" }, 0.9)
-    .from(".nav", { y: -30, opacity: 0, duration: 1, ease: "expo.out" }, 0.8)
+    .from(".nav", { opacity: 0, duration: 1, ease: "power2.out" }, 0.8)
     .add(showChrome, 1.2);
 }
 if (hasGsap && !reduced) {
@@ -150,6 +150,35 @@ const onScroll = () => {
   lastY = y;
 };
 addEventListener("scroll", onScroll, { passive: true });
+// nada flutuante por cima do conteúdo:
+// - aba lateral só no topo da página
+// - botão do WhatsApp recolhe quando ficaria sobre áreas de largura total
+//   (topo, faixa, slider de serviços, fotos do Instagram, CTA final e rodapé)
+const sideTab = $(".side-tab"), waFloat = $(".wa-float");
+const floatZones = $$(".hero, .ticker, .stage, .insta__rail, .final, .footer");
+const syncFloat = () => {
+  const h = window.innerHeight, w = document.documentElement.clientWidth;
+  sideTab?.classList.toggle("is-away", window.scrollY > h * 0.15);
+  if (!waFloat) return;
+  const zone = { top: h - 100, bottom: h, left: w - 100, right: w };
+  const hit = floatZones.some((z) => {
+    const r = z.getBoundingClientRect();
+    return r.top < zone.bottom && r.bottom > zone.top && r.left < zone.right && r.right > zone.left;
+  });
+  waFloat.classList.toggle("is-away", hit);
+};
+addEventListener("scroll", syncFloat, { passive: true });
+addEventListener("resize", syncFloat);
+syncFloat();
+// celular/tablet: o texto ocupa a largura toda, então o WhatsApp vai para a barra do topo
+const mqCompact = window.matchMedia("(max-width: 1100px)");
+const placeWa = () => {
+  if (!waFloat) return;
+  if (mqCompact.matches) $(".nav__burger").before(waFloat);
+  else if (waFloat.parentElement !== document.body) document.body.insertBefore(waFloat, $(".lightbox"));
+};
+mqCompact.addEventListener("change", placeWa);
+placeWa();
 const sections = $$("main section[id]");
 const links = $$(".nav__links a");
 const io = new IntersectionObserver((entries) => {
