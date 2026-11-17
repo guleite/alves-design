@@ -619,7 +619,7 @@ function submitLead() {
     origem: "LP AlvesDesign", pagina: location.href, data: new Date().toISOString(),
   };
   const linhas = [
-    `Olá, July! Vim pelo site do AlvesDesign e quero conversar sobre um projeto.`,
+    `Olá, Julyanne! Vim pelo site do AlvesDesign e quero conversar sobre um projeto.`,
     ``,
     `• Projeto: ${payload.projeto || "-"}`,
     `• Momento do imóvel: ${payload.momento || "-"}`,
