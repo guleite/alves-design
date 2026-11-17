@@ -278,11 +278,12 @@ body:not(.js) .loader { display: none; }
 .about__badge { position: absolute; right: 0; top: -136px; width: 120px; height: 120px; display: grid; place-items: center; }
 .about__badge svg { position: absolute; inset: 0; width: 100%; height: 100%; animation: spin 22s linear infinite; }
 .about__badge text { font: 600 9.6px var(--sans); letter-spacing: .2em; text-transform: uppercase; fill: var(--text); }
-.about__badge span { width: 62px; height: 62px; border-radius: 50%; background: var(--clay); display: grid; place-items: center; }
+.about__badge span { width: 68px; height: 68px; border-radius: 50%; background: var(--clay); display: grid; place-items: center; }
 .about__badge-mark {
-  display: block; height: 46px; aspect-ratio: 895 / 900; background: #fff;
-  -webkit-mask: url(../img/marca/al.png) center / contain no-repeat;
-  mask: url(../img/marca/al.png) center / contain no-repeat;
+  /* al-selo.png: AL completo, com a perninha do "a" à esquerda e o traço do "l" à direita */
+  display: block; width: 58px; aspect-ratio: 1304 / 900; background: #fff;
+  -webkit-mask: url(../img/marca/al-selo.png) center / contain no-repeat;
+  mask: url(../img/marca/al-selo.png) center / contain no-repeat;
 }
 @keyframes spin { to { transform: rotate(360deg); } }
 .about__text p { color: #5b524a; }
@@ -589,6 +590,8 @@ body:not(.js) .reveal-img { clip-path: none; }
   .about__grid, .process__grid, .faq__grid { grid-template-columns: 1fr; }
   .about { padding-top: max(124px, 13vw); }
   .about__badge { left: auto; right: 0; top: -106px; width: 96px; height: 96px; }
+  .about__badge span { width: 58px; height: 58px; }
+  .about__badge-mark { width: 50px; }
   .process__sticky { position: relative; top: 0; }
   .steps { padding: 0; }
   .step { opacity: 1; }
@@ -620,8 +623,8 @@ body:not(.js) .reveal-img { clip-path: none; }
   .logo--lg .logo__mark { height: 56px; }
   .about__media { padding: 0 8% 18% 0; }
   .about__badge { width: 88px; height: 88px; top: -98px; }
-  .about__badge span { width: 50px; height: 50px; }
-  .about__badge-mark { height: 36px; }
+  .about__badge span { width: 54px; height: 54px; }
+  .about__badge-mark { width: 46px; }
   .creds { grid-template-columns: 1fr; }
   .creds li:nth-child(odd) { border-right: 0; }
   .creds li:nth-child(even) { padding-left: 0; }
