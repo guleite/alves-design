@@ -67,7 +67,7 @@ svg { display: block; }
   letter-spacing: .06em; text-transform: uppercase;
 }
 .h2 em, .final__title em { font-style: normal; color: var(--clay); }
-.about__lead { font-size: 18px; }
+.about__lead { font-size: inherit; }
 
 /* split lines (JS envolve cada palavra) */
 .split .w { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: .06em; margin-bottom: -.06em; }
@@ -178,7 +178,7 @@ body:not(.js) .loader { display: none; }
 .menu__wrap { position: relative; height: 100%; display: grid; grid-template-columns: 1.2fr .8fr; align-items: center; gap: 40px; padding: 120px var(--pad) 40px; }
 .menu__list { list-style: none; margin: 0; padding: 0; }
 .menu__list li { overflow: hidden; }
-.menu__list a { display: flex; align-items: baseline; gap: 22px; padding: 8px 0; font: 300 clamp(28px, 4.6vw, 70px)/1.05 var(--display); letter-spacing: .06em; text-transform: uppercase; transform: translateY(105%); transition: color .3s, padding .5s var(--ease-out); }
+.menu__list a { display: flex; align-items: baseline; gap: 22px; padding: 8px 0; font: 300 clamp(22px, 3vw, 46px)/1.1 var(--display); letter-spacing: .06em; text-transform: uppercase; transform: translateY(105%); transition: color .3s, padding .5s var(--ease-out); }
 .menu__list a small { font: 500 12px/1 var(--sans); letter-spacing: .2em; color: var(--clay); }
 .menu__list a:hover { color: #e7b48f; padding-left: 18px; }
 .menu__preview { margin: 0; aspect-ratio: 4/5; max-height: 64vh; overflow: hidden; clip-path: inset(100% 0 0 0); }
@@ -278,11 +278,11 @@ body:not(.js) .loader { display: none; }
 .about__badge { position: absolute; right: 0; top: -136px; width: 120px; height: 120px; display: grid; place-items: center; }
 .about__badge svg { position: absolute; inset: 0; width: 100%; height: 100%; animation: spin 22s linear infinite; }
 .about__badge text { font: 600 9.6px var(--sans); letter-spacing: .2em; text-transform: uppercase; fill: var(--text); }
-.about__badge span { width: 54px; height: 54px; border-radius: 50%; background: var(--clay); display: grid; place-items: center; }
+.about__badge span { width: 62px; height: 62px; border-radius: 50%; background: var(--clay); display: grid; place-items: center; }
 .about__badge-mark {
-  display: block; height: 34px; aspect-ratio: 289 / 600; background: #fff;
-  -webkit-mask: url(../img/marca/al-letras.png) center / contain no-repeat;
-  mask: url(../img/marca/al-letras.png) center / contain no-repeat;
+  display: block; height: 46px; aspect-ratio: 895 / 900; background: #fff;
+  -webkit-mask: url(../img/marca/al.png) center / contain no-repeat;
+  mask: url(../img/marca/al.png) center / contain no-repeat;
 }
 @keyframes spin { to { transform: rotate(360deg); } }
 .about__text p { color: #5b524a; }
@@ -620,8 +620,8 @@ body:not(.js) .reveal-img { clip-path: none; }
   .logo--lg .logo__mark { height: 56px; }
   .about__media { padding: 0 8% 18% 0; }
   .about__badge { width: 88px; height: 88px; top: -98px; }
-  .about__badge span { width: 44px; height: 44px; }
-  .about__badge-mark { height: 28px; }
+  .about__badge span { width: 50px; height: 50px; }
+  .about__badge-mark { height: 36px; }
   .creds { grid-template-columns: 1fr; }
   .creds li:nth-child(odd) { border-right: 0; }
   .creds li:nth-child(even) { padding-left: 0; }
