@@ -116,10 +116,11 @@ svg { display: block; }
 .loader__line i { display: block; height: 100%; width: 100%; background: var(--clay); transform: scaleX(0); transform-origin: left; }
 .loader__tag { margin: 0; font: 500 11px/1 var(--sans); letter-spacing: .3em; text-transform: uppercase; opacity: 0; }
 .loader__panel { position: absolute; top: 0; bottom: 0; width: 25.1%; background: var(--ink); }
-.loader__panel:nth-of-type(1) { left: 0; }
-.loader__panel:nth-of-type(2) { left: 25%; }
-.loader__panel:nth-of-type(3) { left: 50%; }
-.loader__panel:nth-of-type(4) { left: 75%; }
+/* nth-child: .loader__inner é o 1º filho, os painéis vêm do 2º ao 5º */
+.loader__panel:nth-child(2) { left: 0; }
+.loader__panel:nth-child(3) { left: 25%; }
+.loader__panel:nth-child(4) { left: 50%; }
+.loader__panel:nth-child(5) { left: 75%; }
 body:not(.js) .loader { display: none; }
 
 /* ---------- Cursor ---------- */
@@ -194,7 +195,7 @@ body:not(.js) .loader { display: none; }
   transform: translate(-100%, -50%); transition: transform .6s var(--ease-out), background .3s;
 }
 .side-tab.is-in { transform: translate(0, -50%); }
-.side-tab.is-in.is-away { transform: translate(-100%, -50%); } /* só aparece no topo, sem cobrir conteúdo */
+.side-tab.is-in.is-away { transform: translate(-100%, -50%); box-shadow: none; } /* só aparece no topo, sem cobrir conteúdo */
 .side-tab:hover { background: var(--clay); color: #fff; }
 .side-tab span { writing-mode: vertical-rl; transform: rotate(180deg); font: 500 10px/1 var(--sans); letter-spacing: .06em; }
 .side-tab svg { width: 11px; height: 11px; fill: currentColor; transform: rotate(-90deg); }

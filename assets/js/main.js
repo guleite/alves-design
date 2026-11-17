@@ -169,6 +169,8 @@ const syncFloat = () => {
 };
 addEventListener("scroll", syncFloat, { passive: true });
 addEventListener("resize", syncFloat);
+// ao recarregar no meio da página o navegador restaura a rolagem depois do script
+addEventListener("load", () => { syncFloat(); nav.classList.toggle("is-scrolled", window.scrollY > 40); lastY = window.scrollY; });
 syncFloat();
 // celular/tablet: o texto ocupa a largura toda, então o WhatsApp vai para a barra do topo
 const mqCompact = window.matchMedia("(max-width: 1100px)");
