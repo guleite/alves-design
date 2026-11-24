@@ -261,9 +261,12 @@ if (hasGsap && !reduced) {
   // CTA final: foto se aproxima
   gsap.to(".final__media img", { scale: 1, ease: "none", scrollTrigger: { trigger: ".final", start: "top bottom", end: "center center", scrub: true } });
   // galeria entra em cascata
+  // fromTo com valores finais fixos + once: a foto sempre termina 100% visível,
+  // mesmo se a pessoa rolar para cima e para baixo durante a animação
   ScrollTrigger.batch(".g-item", {
     start: "top 92%",
-    onEnter: (els) => gsap.from(els, { y: 60, opacity: 0, duration: 1.1, stagger: 0.08, ease: "expo.out", overwrite: true }),
+    once: true,
+    onEnter: (els) => gsap.fromTo(els, { y: 60, opacity: 0 }, { y: 0, opacity: 1, duration: 1.1, stagger: 0.08, ease: "expo.out", overwrite: true }),
   });
   gsap.from(".presence__list li", { y: 30, opacity: 0, duration: 0.9, stagger: 0.07, ease: "expo.out", scrollTrigger: { trigger: ".presence", start: "top 85%" } });
   gsap.from(".insta__rail img", { x: 120, opacity: 0, duration: 1.2, stagger: 0.07, ease: "expo.out", scrollTrigger: { trigger: ".insta__rail", start: "top 88%" } });
@@ -619,7 +622,7 @@ function submitLead() {
     origem: "LP AlvesDesign", pagina: location.href, data: new Date().toISOString(),
   };
   const linhas = [
-    `Olá, Julyanne! Vim pelo site do AlvesDesign e quero conversar sobre um projeto.`,
+    `Olá. Vim pelo site do escritório e quero conversar sobre um projeto:`,
     ``,
     `• Projeto: ${payload.projeto || "-"}`,
     `• Momento do imóvel: ${payload.momento || "-"}`,
@@ -627,8 +630,8 @@ function submitLead() {
     `• Quando quero começar: ${payload.prazo || "-"}`,
     ``,
     `Nome: ${nome}`,
-    payload.local ? `Local: ${payload.local}` : null,
-  ].filter((l) => l !== null);
+    `Local: ${payload.local || "-"}`,
+  ];
   const url = `https://wa.me/${ALVES_WHATSAPP}?text=${encodeURIComponent(linhas.join("\n"))}`;
   $(".js-wa", form).href = url;
   $(".js-name", form).textContent = nome.split(" ")[0];
